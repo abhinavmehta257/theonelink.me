@@ -19,7 +19,9 @@ function CreateLink() {
     const link = document.querySelector("input[type='url']").value;
     console.log("link sent", link);
     const { data } = await axios
-      .post("http://localhost:3001/click/addlink", { link: link })
+      .post("https://linker-backend.herokuapp.com/click/addlink", {
+        link: link,
+      })
       .catch((err) => console.log(err));
     console.log("data:", data);
     setgeneratedLink(data);
