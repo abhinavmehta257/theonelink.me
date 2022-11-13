@@ -2,7 +2,7 @@ function HeroSection() {
   return (
     <div className="header-main">
       <div className="inner-header-main row">
-        <div className="col-lg-7">
+        <div className="col-lg-7 col-md-7">
           <h1>
             Everything to share in one simple <span>Link</span>
           </h1>
@@ -20,7 +20,7 @@ function HeroSection() {
           </form>
         </div>
 
-        <div className="col-lg-5 mt-5">
+        <div className="col-lg-5 col-md-5 mt-5">
           <div className="feature-image text-lg-end">
             <img src="assets/images/62.png" alt="" />
           </div>

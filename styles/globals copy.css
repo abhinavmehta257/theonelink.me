@@ -11440,7 +11440,6 @@ p {
 @media only screen and (max-width: 768px) {
   .inner-header-main {
     padding: 100px 20px;
-    height: 90vh;
   }
   .inner-header-main .col-lg-7 {
     padding: 0 20px;
@@ -11461,7 +11460,6 @@ p {
 @media only screen and (min-width: 768px) {
   .inner-header-main {
     padding: 50px;
-    height: 80vh;
   }
   .inner-header-main .col-lg-7 {
     padding: 0 50px;
@@ -11790,7 +11788,6 @@ Author: lineicons.com
   -o-transform: scale(1, -1);
   transform: scale(1, -1);
 }
-
 
 .lni-500px::before {
   content: "\ea02";
