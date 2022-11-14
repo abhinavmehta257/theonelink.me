@@ -10,6 +10,7 @@ function isValidURL(string) {
 }
 
 function CreateLink() {
+  console.log("test");
   const [popup, setPopup] = useState(false);
   const [isValidLink, setIsValidLink] = useState(true);
   const [generatedLink, setgeneratedLink] = useState({});
@@ -17,15 +18,22 @@ function CreateLink() {
   async function generateLink(event) {
     event.preventDefault();
     const link = document.querySelector("input[type='url']").value;
-    console.log("link sent", link);
-    const { data } = await axios
-      .post("https://linker-backend.herokuapp.com/click/addlink", {
-        link: link,
-      })
-      .catch((err) => console.log(err));
-    console.log("data:", data);
-    setgeneratedLink(data);
-    setPopup(true);
+    if (link.length > 0) {
+      console.log("link sent", link);
+      const { data } =
+        (await axios
+          .post("api/generateLink", {
+            link: link,
+          })
+          .catch((err) => console.log(err))) || {};
+      if (data) {
+        console.log("data:", data);
+        setgeneratedLink(data);
+        setPopup(true);
+      }
+    } else {
+      setIsValidLink(false);
+    }
   }
 
   function checkURL(e) {

@@ -10069,7 +10069,6 @@ p {
 
 .feature-section {
   position: relative;
-  padding-top: 120px;
 }
 
 .feature-section .section-title {
@@ -10205,10 +10204,8 @@ p {
 }
 
 .feature-section-2 {
-  padding-top: 150px;
   position: relative;
   z-index: 1;
-  height: 700px;
   display: flex;
   align-items: center;
 }
@@ -10223,7 +10220,6 @@ p {
   (max-width: 767px) {
   .feature-section-2 {
     height: auto;
-    padding-top: 120px;
   }
 }
 
@@ -10298,7 +10294,6 @@ p {
   background-position: center;
   background-repeat: no-repeat;
   padding-top: 80px;
-  margin-top: 200px;
 }
 
 .footer .section-title {
@@ -10434,6 +10429,9 @@ p {
 
 .footer .footer-social ul li a:hover {
   background: #00b06e;
+}
+section {
+  padding-top: 120px;
 }
 
 .mt-5 {
@@ -11400,7 +11398,7 @@ p {
     flex-direction: column;
     align-items: center;
   }
-  .create-link button {
+  .create-link #generate-link {
     margin-left: 0;
     margin-top: 20px;
   }
@@ -11419,7 +11417,7 @@ p {
   .create-link {
     display: flex;
   }
-  .create-link button {
+  .create-link #generate-link {
     margin-left: -60px;
   }
   .inner-header-main .create-link input {
@@ -11563,7 +11561,7 @@ p {
 .create-link {
   margin-top: 50px;
 }
-.create-link button {
+.create-link #generate-link {
   display: inline-block;
   height: 64px;
   font-weight: 400;
@@ -13853,4 +13851,7 @@ p {
   width: 100%;
   text-align: end;
   cursor: pointer;
+}
+
+.feature-section-3 img {
 }
