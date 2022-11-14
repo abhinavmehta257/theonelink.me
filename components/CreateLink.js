@@ -14,18 +14,20 @@ function CreateLink() {
   const [popup, setPopup] = useState(false);
   const [isValidLink, setIsValidLink] = useState(true);
   const [generatedLink, setgeneratedLink] = useState({});
-
+  const [isLoading, setIsLoading] = useState(false);
   async function generateLink(event) {
     event.preventDefault();
     const link = document.querySelector("input[type='url']").value;
     if (link.length > 0) {
       console.log("link sent", link);
+      setIsLoading(true);
       const { data } =
         (await axios
           .post("api/generateLink", {
             link: link,
           })
           .catch((err) => console.log(err))) || {};
+      setIsLoading(false);
       if (data) {
         console.log("data:", data);
         setgeneratedLink(data);
@@ -66,8 +68,12 @@ function CreateLink() {
               **Please enter a valid URL
             </p>
           </div>
-          <button id="generate-link" onClick={generateLink}>
-            Generate
+          <button
+            disabled={isLoading}
+            id="generate-link"
+            onClick={generateLink}
+          >
+            {!isLoading ? <span>Generate</span> : <span>Generating..</span>}
           </button>
         </div>
       </div>
