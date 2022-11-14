@@ -11320,22 +11320,26 @@ section {
 .social-icons {
   text-align: center;
 }
+
 .row {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-.row img,
-.row span {
+.social-icons .row img,
+.social-icons .row span {
   width: 100px;
   margin: 10px 20px;
 }
 
 @media only screen and (max-width: 720px) {
-  .row img,
-  .row span {
+  .social-icons .row img,
+  .social-icons .row span {
     width: 60px;
     margin: 10px 20px;
+  }
+  #feature-3 img {
+    width: 100%;
   }
 }
 .socials {
