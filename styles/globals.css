@@ -11329,14 +11329,14 @@ section {
 .social-icons .row img,
 .social-icons .row span {
   width: 100px;
-  margin: 10px 20px;
+  margin: 10px;
 }
 
 @media only screen and (max-width: 720px) {
   .social-icons .row img,
   .social-icons .row span {
     width: 60px;
-    margin: 10px 20px;
+    margin: 10px;
   }
   #feature-3 img {
     width: 100%;
@@ -13904,4 +13904,34 @@ p {
   100% {
     transform: rotate(360deg);
   }
+}
+
+[data-color="purple"] {
+  --primary-color: #ea0c5b;
+  --light-blue: #d63384;
+  --button-color-light: #d63384;
+}
+
+div[data-id="1668491234186988"] a > app-global-element:first-child img,
+div[data-id="1668496178313304"] a > app-global-element:first-child img,
+div[data-id="1668491234208141"] a > app-global-element:first-child img {
+  width: 45px !important;
+}
+
+div[data-id="1668491024456789"] {
+  background: #eee;
+}
+div[data-id="1668504224495168"] + div {
+  max-width: fit-content !important;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+div[data-id="1668504224495168"] {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.redirect-page {
+  text-align: center;
 }

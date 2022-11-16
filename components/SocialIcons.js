@@ -2,7 +2,6 @@ function SocialIcons() {
   return (
     <div className="social-icons">
       <h2>create direct to app like for:</h2>
-
       <div>
         <div className="row">
           <img src="/assets/images/facebook.gif"></img>

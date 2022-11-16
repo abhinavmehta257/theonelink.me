@@ -8,7 +8,7 @@ function GeneratedLink({ link, id, close }) {
     });
   };
   const copyToClipboard = () => {
-    navigator.clipboard.writeText("https://inapp.theonelink.me/" + id);
+    navigator.clipboard.writeText("https://theonelink.me/" + id);
     console.log(id);
     notify();
   };
@@ -33,7 +33,7 @@ function GeneratedLink({ link, id, close }) {
         <p>Link created successfully</p>
         <div className="link-container">
           <div className="link">
-            inapp.theonelink.me/{id[0]}
+            theonelink.me/{id[0]}
             {id[1]}
             {id[2]}
             {id[3]}
