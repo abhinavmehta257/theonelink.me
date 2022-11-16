@@ -10,7 +10,7 @@ function openTheOneLink() {
 export default function RedirectPage() {
   function redirectToApp(redirectLink) {
     console.log(redirectLink);
-    var redirectLink = generateDeepLink(redirectLink.replace(/&amp;/g, "&"));
+    var NewRedirectLink = generateDeepLink(redirectLink.replace(/&amp;/g, "&"));
     var noapplink = redirectLink.replace(/&amp;/g, "&");
     console.log(redirectLink);
     function try_close() {
@@ -24,7 +24,7 @@ export default function RedirectPage() {
         window.location.replace(noapplink);
       }
     }
-    window.location.replace(redirectLink);
+    window.location.replace(NewRedirectLink);
     setTimeout(noappfound, 501);
   }
   const router = useRouter();
