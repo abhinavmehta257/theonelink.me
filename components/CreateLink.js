@@ -36,6 +36,7 @@ function CreateLink() {
     } else {
       setIsValidLink(false);
     }
+    event.target.value = "";
   }
 
   function checkURL(e) {

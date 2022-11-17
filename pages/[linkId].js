@@ -3,11 +3,10 @@ import axios from "axios";
 import { generateDeepLink } from "../helpers/openInAppLinkGenerator";
 import { useRouter } from "next/router";
 
-function openTheOneLink() {
-  window.open("https://theonelink.me", "_blank");
-}
-
 export default function RedirectPage() {
+  function openTheOneLink() {
+    window.open("https://theonelink.me", "_blank");
+  }
   function redirectToApp(redirectLink) {
     console.log(redirectLink);
     var NewRedirectLink = generateDeepLink(redirectLink.replace(/&amp;/g, "&"));
@@ -38,9 +37,13 @@ export default function RedirectPage() {
       data.link.length > 0 &&
       data.link != undefined &&
       data.link != null &&
-      data.link != ""
+      data.link != "" &&
+      data
     ) {
       redirectToApp(data.link);
+    } else {
+      window.location.replace("https://theonelink.me");
+      console.log("redirect");
     }
   }
 

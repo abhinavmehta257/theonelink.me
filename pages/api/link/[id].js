@@ -16,5 +16,5 @@ export default async function handler(req, res) {
     console.log(err);
     res.status(400).send({ error: "no link found" });
   }
-  return res.send(link);
+  return res.send({ data: false });
 }
