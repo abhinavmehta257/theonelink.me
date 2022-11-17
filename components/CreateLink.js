@@ -36,7 +36,7 @@ function CreateLink() {
     } else {
       setIsValidLink(false);
     }
-    event.target.value = "";
+    document.querySelector("input[type='url']").value = "";
   }
 
   function checkURL(e) {

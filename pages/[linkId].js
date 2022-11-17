@@ -42,7 +42,7 @@ export default function RedirectPage() {
     ) {
       redirectToApp(data.link);
     } else {
-      window.location.replace("https://theonelink.me");
+      window.location.replace();
       console.log("redirect");
     }
   }
